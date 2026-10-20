@@ -4,6 +4,8 @@
 
 Boilerplate Next.js (App Router + TypeScript + Tailwind CSS) sẵn sàng dùng ngay, không cần setup lại từ đầu mỗi khi bắt đầu dự án mới.
 
+> Có admin, trang client dạng tin tức không có sản phẩm
+
 ## Đã có sẵn
 
 - **Next.js 14 (App Router)** + TypeScript strict mode
