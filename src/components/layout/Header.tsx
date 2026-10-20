@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { APP_NAME } from "@/constants";
+import { APP_NAME } from "src-2/constants";
 
 export default function Header() {
   return (

@@ -1,0 +1,9 @@
+{
+  "description": { "vi": "Giới thiệu ngắn về công ty.", "en": "A short intro about the company." },
+  "address": { "vi": "123 Đường ABC, Quận 1, TP. Hồ Chí Minh", "en": "123 ABC Street, District 1, Ho Chi Minh City" },
+  "phone": "0900 000 000",
+  "email": "info@example.com",
+  "facebook": "",
+  "youtube": "",
+  "copyright": { "vi": "© 2026 Tên công ty. Bảo lưu mọi quyền.", "en": "© 2026 Company Name. All rights reserved." }
+}

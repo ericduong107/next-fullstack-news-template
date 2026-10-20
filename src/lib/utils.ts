@@ -1,37 +1,40 @@
-import { type ClassValue, clsx } from "clsx";
+import { siteConfig } from '@/config/site.config';
 
-/**
- * Gộp class names, bỏ qua giá trị falsy.
- * Dùng: cn("p-4", isActive && "bg-primary", className)
- */
-export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs);
+export const cn = (...c: (string | false | null | undefined)[]) => c.filter(Boolean).join(' ');
+
+export const uid = () => Math.random().toString(36).slice(2, 10);
+
+export function slugify(s: string): string {
+  return s
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'D')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
-/**
- * Format số thành chuỗi tiền tệ VNĐ.
- */
-export function formatCurrency(amount: number, currency = "VND") {
-  return new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency,
-  }).format(amount);
+/** Lấy giá trị theo ngôn ngữ: string thường hoặc {vi, en}. Tự fallback về ngôn ngữ mặc định. */
+export function pick(field: unknown, locale: string): string {
+  if (field == null) return '';
+  if (typeof field === 'string') return field;
+  if (typeof field === 'object') {
+    const o = field as Record<string, string>;
+    return o[locale] || o[siteConfig.i18n.defaultLocale] || Object.values(o).find(Boolean) || '';
+  }
+  return String(field);
 }
 
-/**
- * Format ngày theo định dạng Việt Nam.
- */
-export function formatDate(date: Date | string) {
-  return new Intl.DateTimeFormat("vi-VN", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  }).format(new Date(date));
+export function formatDate(d: string | undefined, locale: string): string {
+  if (!d) return '';
+  const date = new Date(d);
+  if (isNaN(date.getTime())) return '';
+  return date.toLocaleDateString(locale === 'vi' ? 'vi-VN' : 'en-US');
 }
 
-/**
- * Sleep tiện dụng cho việc test / giả lập độ trễ.
- */
-export function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+export function paginate<T>(items: T[], page: number, size: number) {
+  const totalPages = Math.max(1, Math.ceil(items.length / size));
+  const current = Math.min(Math.max(1, page || 1), totalPages);
+  return { items: items.slice((current - 1) * size, current * size), page: current, totalPages };
 }

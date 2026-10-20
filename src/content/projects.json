@@ -1,0 +1,16 @@
+[
+  {
+    "id": "j1k2l3m4",
+    "slug": "du-an-mau",
+    "title": { "vi": "Dự án mẫu", "en": "Sample project" },
+    "excerpt": { "vi": "Mô tả ngắn về dự án.", "en": "A short summary of the project." },
+    "content": { "vi": "Chi tiết dự án.", "en": "Project details." },
+    "location": { "vi": "TP. Hồ Chí Minh", "en": "Ho Chi Minh City" },
+    "year": "2026",
+    "cover": "",
+    "date": "2026-09-15",
+    "status": "published",
+    "createdAt": "2026-09-15T00:00:00.000Z",
+    "updatedAt": "2026-09-15T00:00:00.000Z"
+  }
+]

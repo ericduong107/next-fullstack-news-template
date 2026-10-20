@@ -1,0 +1,26 @@
+[
+  {
+    "id": "p1a2b3c4",
+    "slug": "bai-viet-mau-1",
+    "title": { "vi": "Bài viết mẫu đầu tiên", "en": "Our first sample post" },
+    "excerpt": { "vi": "Đây là bài viết mẫu. Hãy vào trang quản trị để sửa hoặc xóa.", "en": "This is a sample post. Open the admin to edit or delete it." },
+    "content": { "vi": "Đoạn đầu tiên của bài viết.\n\nĐoạn thứ hai. Mỗi đoạn cách nhau một dòng trống.", "en": "First paragraph of the post.\n\nSecond paragraph. Separate paragraphs with a blank line." },
+    "cover": "",
+    "date": "2026-10-01",
+    "status": "published",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "updatedAt": "2026-10-01T00:00:00.000Z"
+  },
+  {
+    "id": "p5d6e7f8",
+    "slug": "bai-viet-mau-2",
+    "title": { "vi": "Bài viết mẫu thứ hai", "en": "Our second sample post" },
+    "excerpt": { "vi": "Thêm một bài viết để thấy danh sách hoạt động.", "en": "Another post so the list has something to show." },
+    "content": { "vi": "Nội dung bài viết thứ hai.", "en": "Content of the second post." },
+    "cover": "",
+    "date": "2026-10-10",
+    "status": "published",
+    "createdAt": "2026-10-10T00:00:00.000Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z"
+  }
+]
